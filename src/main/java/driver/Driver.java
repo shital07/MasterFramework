@@ -1,6 +1,7 @@
 package driver;
 
 import configuration.ConfigFactory;
+import driver.web.local.LocalDriverFactory;
 import enums.BrowserType;
 
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class Driver {
         BrowserType browser = ConfigFactory.getConfig().browser();
 
         if (Objects.isNull(DriverManager.getDriver())) {
-            DriverManager.setDriver(LocalDriverFactory.getDriver());
+            DriverManager.setDriver(LocalDriverFactory.getDriver(ConfigFactory.getConfig().browser()));
         }
 
         DriverManager.getDriver().get(ConfigFactory.getConfig().url());

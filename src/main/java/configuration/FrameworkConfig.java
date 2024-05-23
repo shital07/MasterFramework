@@ -3,10 +3,13 @@ package configuration;
 import configuration.converter.StringToBrowserTypeConverter;
 import configuration.converter.StringToRemoteModeTypeConverter;
 import configuration.converter.StringToRunmodeConverter;
+import configuration.converter.StringToURLConverter;
 import enums.BrowserType;
 import enums.RemoteModeType;
 import enums.RunMode;
 import org.aeonbits.owner.Config;
+
+import java.net.URL;
 
 
 //@Config.LoadPolicy(Config.LoadType.MERGE)
@@ -27,5 +30,10 @@ public interface FrameworkConfig extends Config {
     RemoteModeType remotemodetype();
 
 
+    @ConverterClass(StringToURLConverter.class)
+    URL seleniumgridurl();
+
+    @ConverterClass(StringToURLConverter.class)
+    URL browserstackurl();
 
 }
