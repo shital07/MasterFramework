@@ -13,16 +13,32 @@ public final class Driver {
 
     }
 
-    public static void initDriver() {
+    public static void initDriverForWeb() {
 
-        BrowserType browser = ConfigFactory.getConfig().browser();
+        DriverData drivereData = DriverData.builder().browserType(ConfigFactory.getConfig().browser())
+                .runMode(ConfigFactory.getConfig().runbrowsermode())
+                .remoteModeType(ConfigFactory.getConfig().remotebrowsermodetype())
+                .build();
 
-        if (Objects.isNull(DriverManager.getDriver())) {
-            DriverManager.setDriver(LocalDriverFactory.getDriver(ConfigFactory.getConfig().browser()));
-        }
-
-        DriverManager.getDriver().get(ConfigFactory.getConfig().url());
+        DriverFactory.getDriverForWeb(drivereData);
     }
+
+    public static void initDriverForMobile() {
+
+
+        DriverData drivereData = DriverData.builder().browserType(ConfigFactory.getConfig().browser())
+                .runMode(ConfigFactory.getMobileConfig().runmobilemode())
+                .remoteModeType(ConfigFactory.getMobileConfig().remotemobilemodetype())
+                .mobilePlatformType(ConfigFactory.getMobileConfig().platformtype())
+                .build();
+
+        DriverFactory.getDriverForMobile(drivereData);
+
+
+    }
+
+
+
 
     public static void quitDriver() {
         if (Objects.nonNull(DriverManager.getDriver())) {

@@ -1,8 +1,10 @@
 package configuration;
 
+import configuration.converter.StringToMobilePlatformType;
 import configuration.converter.StringToRemoteModeTypeConverter;
 import configuration.converter.StringToRunmodeConverter;
 import configuration.converter.StringToURLConverter;
+import enums.MobilePlatformType;
 import enums.RemoteModeType;
 import enums.RunMode;
 import org.aeonbits.owner.Config;
@@ -31,4 +33,8 @@ public interface MobileConfig extends Config {
     @Key("remotemobilemodetype")
     @ConverterClass(StringToRemoteModeTypeConverter.class)
     RemoteModeType remotemobilemodetype();
+
+
+    @ConverterClass(StringToMobilePlatformType.class)
+    MobilePlatformType platformtype();
 }
