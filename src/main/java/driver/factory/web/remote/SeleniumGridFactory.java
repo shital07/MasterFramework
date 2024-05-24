@@ -1,7 +1,7 @@
-package driver.web.remote;
+package driver.factory.web.remote;
 
-import driver.driverManager.web.remote.seleniumgrid.SeleniumGridChromeManager;
-import driver.driverManager.web.remote.seleniumgrid.SeleniumGridFirefoxManager;
+import driver.manager.web.remote.seleniumgrid.SeleniumGridChromeManager;
+import driver.manager.web.remote.seleniumgrid.SeleniumGridFirefoxManager;
 import enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 

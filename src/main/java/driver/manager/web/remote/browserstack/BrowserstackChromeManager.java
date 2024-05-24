@@ -1,4 +1,4 @@
-package driver.driverManager.web.remote.browserstack;
+package driver.manager.web.remote.browserstack;
 
 import configuration.ConfigFactory;
 import org.openqa.selenium.WebDriver;

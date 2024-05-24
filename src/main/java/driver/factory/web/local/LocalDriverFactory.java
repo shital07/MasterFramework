@@ -1,7 +1,7 @@
-package driver.web.local;
+package driver.factory.web.local;
 
-import driver.driverManager.web.local.ChromeManager;
-import driver.driverManager.web.local.FirefoxManager;
+import driver.manager.web.local.ChromeManager;
+import driver.manager.web.local.FirefoxManager;
 import enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 
@@ -14,7 +14,7 @@ public final class LocalDriverFactory {
 
     }
 
-   public static Map<BrowserType, Supplier<WebDriver>> mp =  new EnumMap<>(BrowserType.class);
+       public static Map<BrowserType, Supplier<WebDriver>> mp =  new EnumMap<>(BrowserType.class);
 
     static {
         mp.put(BrowserType.CHROME, ChromeManager::getDriver);

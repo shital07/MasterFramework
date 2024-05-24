@@ -1,4 +1,4 @@
-package driver.web.remote;
+package driver.factory.web.remote;
 
 import enums.BrowserType;
 import enums.RemoteModeType;

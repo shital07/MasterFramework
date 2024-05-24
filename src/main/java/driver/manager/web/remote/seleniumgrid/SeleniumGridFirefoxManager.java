@@ -1,4 +1,4 @@
-package driver.driverManager.web.remote.seleniumgrid;
+package driver.manager.web.remote.seleniumgrid;
 
 import configuration.ConfigFactory;
 import org.openqa.selenium.WebDriver;

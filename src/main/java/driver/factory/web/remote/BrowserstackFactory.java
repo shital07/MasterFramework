@@ -1,7 +1,7 @@
-package driver.web.remote;
+package driver.factory.web.remote;
 
-import driver.driverManager.web.remote.browserstack.BrowserstackChromeManager;
-import driver.driverManager.web.remote.browserstack.BrowserstackFriefoxManager;
+import driver.manager.web.remote.browserstack.BrowserstackChromeManager;
+import driver.manager.web.remote.browserstack.BrowserstackFriefoxManager;
 import enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 

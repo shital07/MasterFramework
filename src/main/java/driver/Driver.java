@@ -1,7 +1,7 @@
 package driver;
 
 import configuration.ConfigFactory;
-import driver.web.local.LocalDriverFactory;
+import driver.factory.web.local.LocalDriverFactory;
 import enums.BrowserType;
 
 import java.util.Objects;

@@ -13,5 +13,7 @@ public final class ConfigFactory {
 
     }
 
-
+    public static MobileConfig getMobileConfig() {
+        return ConfigCache.getOrCreate(MobileConfig.class);
+    }
 }
