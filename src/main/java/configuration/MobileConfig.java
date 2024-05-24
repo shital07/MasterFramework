@@ -1,6 +1,10 @@
 package configuration;
 
+import configuration.converter.StringToRemoteModeTypeConverter;
+import configuration.converter.StringToRunmodeConverter;
 import configuration.converter.StringToURLConverter;
+import enums.RemoteModeType;
+import enums.RunMode;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
@@ -17,4 +21,14 @@ public interface MobileConfig extends Config {
 
     @ConverterClass(StringToURLConverter.class)
     URL appapkpath();
+
+
+
+    @Key("runmobilemode")
+    @ConverterClass(StringToRunmodeConverter.class)
+    RunMode runmobilemode();
+
+    @Key("remotemobilemodetype")
+    @ConverterClass(StringToRemoteModeTypeConverter.class)
+    RemoteModeType remotemobilemodetype();
 }

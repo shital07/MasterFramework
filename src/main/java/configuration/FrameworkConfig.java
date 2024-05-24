@@ -21,13 +21,16 @@ public interface FrameworkConfig extends Config {
     // @DefaultValue("chrome")
     @ConverterClass(StringToBrowserTypeConverter.class)
     BrowserType browser();
+
     String url();
 
+    @Key("runbrowsermode")
     @ConverterClass(StringToRunmodeConverter.class)
-    RunMode runmode();
+    RunMode runbrowsermode();
 
+    @Key("remotebrowsermodetype")
     @ConverterClass(StringToRemoteModeTypeConverter.class)
-    RemoteModeType remotemodetype();
+    RemoteModeType remotebrowsermodetype();
 
 
     @ConverterClass(StringToURLConverter.class)
