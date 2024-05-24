@@ -1,9 +1,5 @@
 package driver;
 
-import driver.factory.mobile.local.LocalMobileDriverFactory;
-import driver.factory.mobile.remote.RemoteMobileDriverFactory;
-import driver.factory.web.local.LocalDriverFactory;
-import driver.factory.web.remote.RemoteDriverFactory;
 import enums.RunMode;
 import org.openqa.selenium.WebDriver;
 
@@ -15,31 +11,24 @@ public final class DriverFactory {
     }
 
 
-    public static WebDriver getDriverForWeb(DriverData data) {
+    public static WebDriver getDriverForWeb(WebDriverData data) {
 
-        WebDriver driver = null;
+
         if (data.getRunMode().equals(RunMode.LOCAL)) {
-            driver = LocalDriverFactory.getDriver(data.getBrowserType());
+            return new LocalWebDriverImpl().getDriver(data);
         } else {
-            RemoteDriverFactory.getDriver(data.getRemoteModeType(), data.getBrowserType());
+            return new RemoteWebDriverImpl().getDriver(data);
         }
 
-        return driver;
+
     }
 
-    public static WebDriver getDriverForMobile(DriverData data) {
-
-
-        WebDriver driver = null;
+    public static WebDriver getDriverForMobile(MobileDriverData data) {
         if (data.getRunMode().equals(RunMode.LOCAL)) {
-
-            driver = LocalMobileDriverFactory.getDriver(data.getMobilePlatformType());
+            return new LocalMobileDriverImpl().getDriver(data);
         } else {
-
-            driver = RemoteMobileDriverFactory.getDriver(data.getRemoteModeType(), data.getMobilePlatformType());
+            return new RemoteMobileDriverImpl().getDriver(data);
         }
-
-        return driver;
 
 
     }

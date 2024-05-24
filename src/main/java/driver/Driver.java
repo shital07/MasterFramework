@@ -14,25 +14,24 @@ public final class Driver {
     }
 
     public static void initDriverForWeb() {
-
-        DriverData drivereData = DriverData.builder().browserType(ConfigFactory.getConfig().browser())
+        WebDriverData data = WebDriverData.builder().browserType(ConfigFactory.getConfig().browser())
                 .runMode(ConfigFactory.getConfig().runbrowsermode())
                 .remoteModeType(ConfigFactory.getConfig().remotebrowsermodetype())
                 .build();
 
-        DriverFactory.getDriverForWeb(drivereData);
+        DriverFactory.getDriverForWeb(data);
     }
 
     public static void initDriverForMobile() {
 
 
-        DriverData drivereData = DriverData.builder().browserType(ConfigFactory.getConfig().browser())
+        MobileDriverData data = MobileDriverData.builder()
                 .runMode(ConfigFactory.getMobileConfig().runmobilemode())
                 .remoteModeType(ConfigFactory.getMobileConfig().remotemobilemodetype())
                 .mobilePlatformType(ConfigFactory.getMobileConfig().platformtype())
                 .build();
 
-        DriverFactory.getDriverForMobile(drivereData);
+        DriverFactory.getDriverForMobile(data);
 
 
     }
