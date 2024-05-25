@@ -8,6 +8,6 @@ import java.lang.reflect.Method;
 public class StringToRunmodeConverter implements Converter<RunMode> {
     @Override
     public RunMode convert(Method method, String s) {
-        return RunMode.valueOf(s);
+        return RunMode.valueOf(s.toUpperCase());
     }
 }

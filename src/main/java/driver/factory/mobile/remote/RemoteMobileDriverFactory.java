@@ -22,7 +22,7 @@ public final class RemoteMobileDriverFactory {
 
     static {
         mp.put(RemoteModeType.SELENIUM_GRID, SeleniumGridMobileFactory::getDriver);
-        mp.put(RemoteModeType.BROWSER_STACK, BrowserstackFactory::getDriver);
+        mp.put(RemoteModeType.BROWSER_STACK, BrowserstackMobileFactory::getDriver);
 
 
     }

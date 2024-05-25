@@ -20,10 +20,9 @@ public interface MobileConfig extends Config {
     URL localurl();
 
 
-
-    @ConverterClass(StringToURLConverter.class)
-    URL appapkpath();
-
+    @Key("appapkpath")
+    @DefaultValue("/Users/megatron/Desktop/workspace_shital/MasterFramework/src/main/resources/apk/ApiDemos-debug.apk")
+    String appapkpath();
 
 
     @Key("runmobilemode")

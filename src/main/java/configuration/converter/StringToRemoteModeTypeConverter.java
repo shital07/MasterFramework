@@ -8,6 +8,6 @@ import java.lang.reflect.Method;
 public class StringToRemoteModeTypeConverter implements Converter<RemoteModeType> {
     @Override
     public RemoteModeType convert(Method method, String s) {
-        return RemoteModeType.valueOf(s);
+        return RemoteModeType.valueOf(s.toUpperCase());
     }
 }

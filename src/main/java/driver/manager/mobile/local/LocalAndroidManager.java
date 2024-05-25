@@ -7,16 +7,17 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class LocalAndroidManager {
 
-    private LocalAndroidManager(){
+    private LocalAndroidManager() {
 
     }
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setApp(ConfigFactory.getMobileConfig().appapkpath());
 
-        return new RemoteWebDriver(ConfigFactory.getMobileConfig().localurl(),options);
+
+        return new RemoteWebDriver(ConfigFactory.getMobileConfig().localurl(), options);
 
 
     }
