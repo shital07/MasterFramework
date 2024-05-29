@@ -11,8 +11,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void beforeMethodSetup() {
-        System.out.println(ConfigFactory.getConfig().weburl());
-        System.out.println(ConfigFactory.getConfig().weburl());
         Driver.initDriverForWeb();
     }
 

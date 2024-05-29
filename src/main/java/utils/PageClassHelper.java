@@ -17,4 +17,12 @@ public class PageClassHelper {
 
         DriverManager.getDriver().findElement(by).sendKeys(text);
     }
+
+    public static void selectFromList(By by, String item) {
+
+        DriverManager.getDriver().findElements(by).parallelStream().filter((e) -> e.getText().equalsIgnoreCase(item)).findFirst().get().click();
+
+    }
+
+
 }

@@ -15,6 +15,7 @@
         <selenium.version>4.13.0</selenium.version>
         <testng.version>7.7.0</testng.version>
         <lombok.version>1.18.30</lombok.version>
+        <fixture.version>3.1.0</fixture.version>
     </properties>
 
     <dependencies>
@@ -47,5 +48,12 @@
             <artifactId>java-client</artifactId>
             <version>8.6.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/br.com.six2six/fixture-factory -->
+        <dependency>
+            <groupId>br.com.six2six</groupId>
+            <artifactId>fixture-factory</artifactId>
+            <version>${fixture.version}</version>
+        </dependency>
+
     </dependencies>
 </project>

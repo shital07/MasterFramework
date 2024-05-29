@@ -7,6 +7,6 @@ public class HomePage {
     LeftMenuComponent leftMenuComponent;
 
     public LeftMenuComponent getLeftMenuComponent() {
-        return leftMenuComponent;
+        return new LeftMenuComponent();
     }
 }

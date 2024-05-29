@@ -21,7 +21,7 @@ public final class Driver {
             WebDriverData data = new WebDriverData(ConfigFactory.getConfig().browser(), ConfigFactory.getConfig().remotebrowsermodetype());
             driver = DriverFactory.getDriverForWeb(ConfigFactory.getConfig().runbrowsermode()).getDriver(data);
             DriverManager.setDriver(driver);
-            driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
             loadUrl();
         }
     }
