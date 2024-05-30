@@ -1,4 +1,4 @@
-package pages;
+package pages.web;
 
 import entity.pojo.AddUser;
 import org.openqa.selenium.By;

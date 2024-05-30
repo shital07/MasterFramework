@@ -13,7 +13,7 @@ import java.net.URL;
 
 
 @Config.Sources("file:${user.dir}/src/test/resources/mobile.properties")
-public interface MobileConfig extends Config {
+public interface IMobileConfig extends Config {
 
 
     @ConverterClass(StringToURLConverter.class)

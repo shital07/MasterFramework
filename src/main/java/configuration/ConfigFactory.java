@@ -7,13 +7,18 @@ public final class ConfigFactory {
 
     }
 
-    public static FrameworkConfig getConfig() {
-        return ConfigCache.getOrCreate(FrameworkConfig.class);
+    public static IFrameworkConfig getConfig() {
+        return ConfigCache.getOrCreate(IFrameworkConfig.class);
 
 
     }
 
-    public static MobileConfig getMobileConfig() {
-        return ConfigCache.getOrCreate(MobileConfig.class);
+    public static IMobileConfig getMobileConfig() {
+        return ConfigCache.getOrCreate(IMobileConfig.class);
+    }
+
+
+    public static IAPIConfig getAPIConfig(){
+       return ConfigCache.getOrCreate(IAPIConfig.class);
     }
 }

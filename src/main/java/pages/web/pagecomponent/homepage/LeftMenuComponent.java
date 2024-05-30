@@ -1,12 +1,10 @@
-package pages.pagecomponent.homepage;
+package pages.web.pagecomponent.homepage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pages.enums.LeftMenuItemsType;
+import pages.web.enums.LeftMenuItemsType;
 import utils.ExplicitWaitStrategy;
 import utils.PageClassHelper;
-
-import java.lang.reflect.InvocationTargetException;
 
 public class LeftMenuComponent {
 

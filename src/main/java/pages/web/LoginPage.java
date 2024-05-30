@@ -1,6 +1,5 @@
-package pages;
+package pages.web;
 
-import io.appium.java_client.functions.ExpectedCondition;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.ExplicitWaitStrategy;

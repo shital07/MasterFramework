@@ -1,16 +1,8 @@
 package com.learning.web;
 
-import br.com.six2six.fixturefactory.Fixture;
-import br.com.six2six.fixturefactory.loader.FixtureFactoryLoader;
-import entity.pojo.AddUser;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.AddUserPage;
-import pages.LoginPage;
-import pages.enums.LeftMenuItemsType;
-
-import java.util.List;
+import pages.web.LoginPage;
+import pages.web.enums.LeftMenuItemsType;
 
 public class AddUserDemo extends BaseTest {
 
@@ -20,10 +12,9 @@ public class AddUserDemo extends BaseTest {
     @Test
     public void test() {
 
-        new LoginPage().loginToApplication("Admin", "admin123")
+
+        new LoginPage().loginToApplication("Admin","admin123")
                 .getLeftMenuComponent().setMenu(LeftMenuItemsType.ADMIN);
-
-
 
 
 

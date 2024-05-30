@@ -1,6 +1,7 @@
-package pages;
+package pages.web;
 
-import pages.pagecomponent.homepage.LeftMenuComponent;
+
+import pages.web.pagecomponent.homepage.LeftMenuComponent;
 
 public class HomePage {
 

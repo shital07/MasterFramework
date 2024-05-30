@@ -17,7 +17,7 @@ import java.net.URL;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({"file:${user.dir}/src/test/resources/configuration.properties",
         "file:${user.dir}/src/test/resources/staging.properties"})
-public interface FrameworkConfig extends Config {
+public interface IFrameworkConfig extends Config {
     @DefaultValue("staging")
    String environment();
 

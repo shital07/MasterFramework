@@ -1,6 +1,6 @@
-package pages.enums;
+package pages.web.enums;
 
-import pages.AddUserPage;
+import pages.web.AddUserPage;
 
 import java.util.function.Supplier;
 
